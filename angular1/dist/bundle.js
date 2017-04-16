@@ -71,20 +71,7 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-
-
-// Declare app level module which depends on views, and components
-angular.module('myApp', [
-  'ngRoute',
-  'myApp.view1',
-  'myApp.view2'
-]).
-config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
-  $locationProvider.hashPrefix('!');
-
-  $routeProvider.otherwise({redirectTo: '/view1'});
-}]);
-
+eval("\n\n// Declare app level module which depends on views, and components\nangular.module('myApp', [\n  'ngRoute',\n  'myApp.view1',\n  'myApp.view2'\n]).\nconfig(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {\n  $locationProvider.hashPrefix('!');\n  console.log('asdasd')\n  $routeProvider.otherwise({redirectTo: '/view1'});\n}]);\n\n\n//////////////////\n// WEBPACK FOOTER\n// ./app.js\n// module id = 0\n// module chunks = 0\n\n//# sourceURL=webpack:///./app.js?");
 
 /***/ })
 /******/ ]);
