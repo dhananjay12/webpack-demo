@@ -15,6 +15,11 @@ module.exports = (env) => {
            publicPath: '/dist/',
            filename:'bundle.[name].js',
        },
+       module: {
+           loaders:[
+               {test: /\.css$/, loaders: ['style-loader', 'css-loader'] }
+           ]
+       },
        devtool: ifProd('source-map', 'eval'),
    })
 }
