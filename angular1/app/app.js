@@ -11,3 +11,7 @@ config(['$locationProvider', '$routeProvider', function($locationProvider, $rout
   console.log('asdasd')
   $routeProvider.otherwise({redirectTo: '/view1'});
 }]);
+
+require('./view1/view1.js');
+require('./view2/view2.js');
+
