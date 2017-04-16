@@ -6,9 +6,12 @@
   "license": "MIT",
   "devDependencies": {
     "http-server": "^0.9.0",
-    "webpack": "^2.3.3" 
+    "webpack": "^2.3.3",
+    "webpack-validator" : "^2.2.7",
+    "webpack-dev-server" : "2.1.0-beta.0"
   },
   "scripts": {
+     "dev" : "webpack-dev-server", 
      "build:dev": "webpack",
      "start": "http-server"  
   }

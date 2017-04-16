@@ -8,6 +8,6 @@ angular.module('myApp', [
 ]).
 config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
   $locationProvider.hashPrefix('!');
-
+  console.log('asdasd')
   $routeProvider.otherwise({redirectTo: '/view1'});
 }]);
