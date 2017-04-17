@@ -1,5 +1,7 @@
 'use strict';
-require('./app.css');
+require('./app.css')
+require('angular')
+require('angular-route')
 // Declare app level module which depends on views, and components
 angular.module('myApp', [
   'ngRoute',
@@ -15,3 +17,4 @@ config(['$locationProvider', '$routeProvider', function($locationProvider, $rout
 require('./view1/view1.js');
 require('./view2/view2.js');
 
+ 
