@@ -5,25 +5,26 @@
   "description": "A starter project for AngularJS",
   "license": "MIT",
   "dependencies": {
-   "angular": "~1.5.0",
-   "angular-route": "~1.5.0"
- },
+    "angular": "~1.5.0",
+    "angular-route": "~1.5.0"
+  },
   "devDependencies": {
-    "http-server": "^0.9.0",
-    "webpack": "^2.3.3",
-    "webpack-validator" : "^2.2.7",
-    "webpack-dev-server" : "2.1.0-beta.0",
-    "rimraf": "2.5.4",
-    "webpack-config-utils": "2.0.0",
     "css-loader": "0.23.1",
-    "style-loader": "0.13.1"
+    "http-server": "^0.9.0",
+    "raw-loader": "^0.5.1",
+    "rimraf": "2.5.4",
+    "style-loader": "0.13.1",
+    "webpack": "^2.3.3",
+    "webpack-config-utils": "2.0.0",
+    "webpack-dev-server": "2.1.0-beta.0",
+    "webpack-validator": "^2.2.7"
   },
   "scripts": {
-     "prebuild": "rimraf dist",
-     "build" : "webpack -p --env.prod",
-     "dev" : "webpack-dev-server --env.dev", 
-     "prebuild:dev": "rimraf dist", 
-     "build:dev": "webpack --env.dev",
-     "start": "http-server"  
+    "prebuild": "rimraf dist",
+    "build": "webpack -p --env.prod",
+    "dev": "webpack-dev-server --env.dev",
+    "prebuild:dev": "rimraf dist",
+    "build:dev": "webpack --env.dev",
+    "start": "http-server"
   }
 }

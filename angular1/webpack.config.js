@@ -17,7 +17,8 @@ module.exports = (env) => {
        },
        module: {
            loaders:[
-               {test: /\.css$/, loaders: ['style-loader', 'css-loader'] }
+               {test: /\.css$/, loaders: ['style-loader', 'css-loader'] },
+               {test: /\.html$/, loaders: ['raw-loader'] }
            ]
        },
        devtool: ifProd('source-map', 'eval'),
