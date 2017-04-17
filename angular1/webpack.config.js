@@ -1,6 +1,6 @@
 const {resolve}= require('path')
 const webpackValidator = require('webpack-validator')
-const {getIfUtils} = require('webpack-config-utils')
+const {getIfUtils, removeEmpty} = require('webpack-config-utils')
 const webpack = require('webpack')
 const ProgressBarPlugin = require('progress-bar-webpack-plugin')
 
@@ -24,6 +24,11 @@ module.exports = (env) => {
            ]
        },
        devtool: ifProd('source-map', 'eval'),
-      
+       plugins: removeEmpty([
+           new ProgressBarPlugin(),
+           ifProd(new webpack.optimize.CommonsChunkPlugin({
+                name: 'vendor',
+            })),
+       ])
    })
 }
