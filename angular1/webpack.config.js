@@ -3,6 +3,7 @@ const webpackValidator = require('webpack-validator')
 const {getIfUtils, removeEmpty} = require('webpack-config-utils')
 const webpack = require('webpack')
 const ProgressBarPlugin = require('progress-bar-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = (env) => {
    const {ifProd} = getIfUtils(env)
@@ -14,8 +15,7 @@ module.exports = (env) => {
        },
        output :{
            path : resolve('dist'),
-           publicPath: '/dist/',
-           filename:'bundle.[name].js',
+           filename:'bundle.[name].[chunkhash].js',
        },
        module: {
            loaders:[
@@ -29,6 +29,9 @@ module.exports = (env) => {
            ifProd(new webpack.optimize.CommonsChunkPlugin({
                 name: 'vendor',
             })),
+            new HtmlWebpackPlugin({
+                template: './index.html'
+            })
        ])
    })
 }
