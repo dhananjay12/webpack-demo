@@ -34,6 +34,11 @@ module.exports = (env) => {
             new HtmlWebpackPlugin({
                 template: './index.ejs'
             })
-       ])
+       ]),
+       devServer: {
+		proxy: {
+			"/product": "http://localhost:8200/",
+		}
+	}
    })
 }
